@@ -1,13 +1,13 @@
 public class Utilitarios {
     
     public void mostraMenu(){
-        System.out.println("+++++++++++++++ PET HYDEL +++++++++++++++"+
-                           "+         Furadeira Labs 2022           +"+
-                           "+            [1] HISTÓRICO              +"+
-                           "+            [2] ENTRADA                +"+
-                           "+            [3] ATUALIZAÇÃO            +"+
-                           "+            [4] SAIR                   +"+
-                           "++++++++++++++ MENU INICIAL +++++++++++++");
+        System.out.print("+++++++++++++++ PET HYDEL +++++++++++++++"+"\n"+
+                           "+         Furadeira Labs 2022           +"+"\n"+
+                           "+            [1] HISTÓRICO              +"+"\n"+
+                           "+            [2] ENTRADA                +"+"\n"+
+                           "+            [3] ATUALIZAÇÃO            +"+"\n"+
+                           "+            [4] SAIR                   +"+"\n"+
+                           "++++++++++++++ MENU INICIAL +++++++++++++\n"+"--> ");
     }
 
 }
