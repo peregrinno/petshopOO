@@ -52,6 +52,7 @@ public class App {
                     //Solicita ao usuario todas as informações do PET
                     System.out.print("Nome do animal: ");
                     nome_a = entrada2.nextLine();
+                    nome_a = entrada2.nextLine();
                     System.out.print("Nome do dono: ");
                     nome_d = entrada2.nextLine();
                     System.out.print("CPF do dono: ");
@@ -92,9 +93,7 @@ public class App {
                     System.out.println("Entrada invalida para menu!");
                     break;               
             }
-
         }
-
         entrada2.close();
         entrada1.close();
     }

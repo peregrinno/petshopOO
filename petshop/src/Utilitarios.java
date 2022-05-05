@@ -6,7 +6,7 @@ public class Utilitarios {
                            "+            [1] HISTÓRICO              +"+"\n"+
                            "+            [2] ENTRADA                +"+"\n"+
                            "+            [3] ATUALIZAÇÃO            +"+"\n"+
-                           "+            [4] SAIR                   +"+"\n"+
+                           "+            [0] SAIR                   +"+"\n"+
                            "++++++++++++++ MENU INICIAL +++++++++++++\n"+"--> ");
     }
 

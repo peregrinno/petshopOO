@@ -28,7 +28,7 @@ public class ColecaoAnimal implements ContratoAnimal{
                                 "Nome do animal: "+ a.getNome_animal() + "\n" +
                                 "Nome do dono: " + a.getNome_dono() + "\n" +
                                 "CPF: " + a.getCPF() + "\n" +
-                                "Atendente reponsavel" +a.getAtendente() + "\n" +
+                                "Atendente reponsavel: " +a.getAtendente() + "\n" +
                                 "Status: " + aux_sts + "\n" + 
                                 "Data: " + a.getData_atendimento());
 
