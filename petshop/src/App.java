@@ -8,6 +8,8 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+        
         // Variaveis que serão necessarias para main
         boolean status_loja = true;
         String entrada_menu;
@@ -46,7 +48,7 @@ public class App {
                     status_loja = false;
                     break;
                 case "1":
-                    colecao.historicoAnimal(animal1);
+                    colecao.chamaHistorico();
                     break;
                 case "2":
                     //Solicita ao usuario todas as informações do PET

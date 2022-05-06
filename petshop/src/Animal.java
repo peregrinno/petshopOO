@@ -56,5 +56,25 @@ public class Animal{
     public String getData_atendimento(){
         return this.data_atendimento;
     }
-    
+
+    public String toString(){
+
+        String aux_sts;
+        String resultado;
+
+        if (sts_atendimeto == true){
+            aux_sts = "Aberto";
+        } else {
+            aux_sts = "Fechado";
+        }
+
+        resultado = String.format("Nome do Animal: %s\n", this.nome_animal) +
+                    String.format("Nome do dono..: %s\n", this.nome_dono) +
+                    String.format("CPF...........: %s\n", this.cpf_dono) +
+                    String.format("Atendente.....: %s\n", this.atendente)+
+                    String.format("Status........: %s\n", aux_sts)+
+                    String.format("Data..........: %s\n", this.data_atendimento);
+        
+        return (resultado);
+    }
 }

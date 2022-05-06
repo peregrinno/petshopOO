@@ -1,39 +1,27 @@
 import java.util.*;
 
 public class ColecaoAnimal implements ContratoAnimal{
-
-    ArrayList<Animal> meusAnimais = new ArrayList<Animal>();
+    ArrayList<Animal> meusAnimais = new ArrayList();
 
     Scanner entrada2 = new Scanner(System.in);
 
     
     @Override
-    public void cadastrarAnimal(Animal a) {
+    public void cadastrarAnimal(Animal a) { 
         meusAnimais.add(a);
-        System.out.println("Animais cadastrados com sucesso!");
+        System.out.println("Animal cadastrado com sucesso!\n Total até o momento: " + meusAnimais.size()+ "\n");
+        
     }
 
-    @Override
-    public void historicoAnimal(Animal a) {
-        String aux_sts; 
-        System.out.println("HISTÓRICO");
-        for(int i = 0; i < meusAnimais.size(); i++){
-            if (a.getSts_atendimento() == true){
-                aux_sts = "Aberto";
-            } else {
-                aux_sts = "Fechado";
-            }
-            System.out.println("========================"+"\n" +
-                                "ANIMAL #" + i +"\n" + 
-                                "Nome do animal: "+ a.getNome_animal() + "\n" +
-                                "Nome do dono: " + a.getNome_dono() + "\n" +
-                                "CPF: " + a.getCPF() + "\n" +
-                                "Atendente reponsavel: " +a.getAtendente() + "\n" +
-                                "Status: " + aux_sts + "\n" + 
-                                "Data: " + a.getData_atendimento());
+    public void chamaHistorico(){
+        historicoAnimal(meusAnimais);
+    }
 
+    @Override 
+    public void historicoAnimal(ArrayList<Animal> lista) {
+        for(Animal item: lista){
+            System.out.println(item.toString());
         }
-        
     } 
 
     @Override
