@@ -13,9 +13,6 @@ public class App {
         // Variaveis que serão necessarias para main
         boolean status_loja = true;
         String entrada_menu;
-        String nome_a, nome_d, cpf, data;
-        Boolean sts = false;
-        int aux;
 
         //Novo objeto da classe ultilitarios
         Utilitarios util = new Utilitarios();
@@ -26,14 +23,48 @@ public class App {
         //Novo objeto da classe Animal
         Animal animal1 = new Animal();
 
+        animal1.setNome_animal("Rex");
+        animal1.setNome_dono("Marcos");
+        animal1.setCPF_dono("123456");
         //Nosso Petshop só tem um atendente, no caso é o francisco :)
         animal1.setAtendente("Francisco");
+        animal1.setSts_atendimeto(true);
+        animal1.setData_atendimento("05/04/2022");
 
         //Instaciondo a colecao passando o contrato para a relação da interface
         ContratoAnimal colecao = new ColecaoAnimal();
 
-        //Metodo 2 de entrada para setar os parametros do obejto animal1
-        Scanner entrada2 = new Scanner(System.in);
+        colecao.cadastrarAnimal(animal1);
+
+        /*==============================================================*/
+
+        //Novo objeto da classe Animal
+        Animal animal2 = new Animal();
+
+        animal2.setNome_animal("Troinha");
+        animal2.setNome_dono("Romulo");
+        animal2.setCPF_dono("78910");
+        //Nosso Petshop só tem um atendente, no caso é o francisco :)
+        animal2.setAtendente("Francisco");
+        animal2.setSts_atendimeto(false);
+        animal2.setData_atendimento("07/04/2022");
+
+        colecao.cadastrarAnimal(animal2);
+
+        /*==============================================================*/
+
+        //Novo objeto da classe Animal
+        Animal animal3 = new Animal();
+
+        animal3.setNome_animal("Margarete");
+        animal3.setNome_dono("kkkkkk");
+        animal3.setCPF_dono("111213");
+        //Nosso Petshop só tem um atendente, no caso é o francisco :)
+        animal3.setAtendente("Francisco");
+        animal3.setSts_atendimeto(true);
+        animal3.setData_atendimento("17/05/2022");
+
+        colecao.cadastrarAnimal(animal3);
 
         //Loop para perpetua o funcionamento da loja até que o usuario queira sair
         while (status_loja == true) {
@@ -51,44 +82,6 @@ public class App {
                     colecao.chamaHistorico();
                     break;
                 case "2":
-                    //Solicita ao usuario todas as informações do PET
-                    System.out.print("Nome do animal: ");
-                    nome_a = entrada2.nextLine();
-                    nome_a = entrada2.nextLine();
-                    System.out.print("Nome do dono: ");
-                    nome_d = entrada2.nextLine();
-                    System.out.print("CPF do dono: ");
-                    cpf = entrada2.nextLine();
-                    System.out.print("Data de atendimento: ");
-                    data = entrada2.nextLine();
-                    System.out.print("Atendimento \n [1] Aberto [2] Fechado \n --> ");
-                    aux = entrada2.nextInt();
-                    //Se 1: Atendimento aberto; Se 2: Atendimento fechado
-                    if (aux == 1){
-                        sts = true;
-                        animal1.setNome_animal(nome_a);
-                        animal1.setNome_dono(nome_d);
-                        animal1.setCPF_dono(cpf);
-                        animal1.setData_atendimento(data);
-                        animal1.setSts_atendimeto(sts);
-
-                        colecao.cadastrarAnimal(animal1);
-                        break;
-                    } else if (aux == 2){
-                        sts = false;
-                        animal1.setNome_animal(nome_a);
-                        animal1.setNome_dono(nome_d);
-                        animal1.setCPF_dono(cpf);
-                        animal1.setData_atendimento(data);
-                        animal1.setSts_atendimeto(sts);
-
-                        colecao.cadastrarAnimal(animal1);
-                        break;
-                    } else {
-                        System.out.println("Entrada invalida para atendimento! ");
-                        break;
-                    }
-                case "3":
                     colecao.atualizarAnimal(animal1);
 
                 default:
@@ -96,7 +89,6 @@ public class App {
                     break;               
             }
         }
-        entrada2.close();
         entrada1.close();
     }
 }

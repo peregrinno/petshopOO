@@ -4,8 +4,7 @@ public class Utilitarios {
         System.out.print("+++++++++++++++ PET HYDEL +++++++++++++++"+"\n"+
                            "+         Furadeira Labs 2022           +"+"\n"+
                            "+            [1] HISTÓRICO              +"+"\n"+
-                           "+            [2] ENTRADA                +"+"\n"+
-                           "+            [3] ATUALIZAÇÃO            +"+"\n"+
+                           "+            [2] ATUALIZAÇÃO            +"+"\n"+
                            "+            [0] SAIR                   +"+"\n"+
                            "++++++++++++++ MENU INICIAL +++++++++++++\n"+"--> ");
     }

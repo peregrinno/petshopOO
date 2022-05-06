@@ -1,12 +1,10 @@
 import java.util.*;
 
 public class ColecaoAnimal implements ContratoAnimal{
-    ArrayList<Animal> meusAnimais = new ArrayList();
+    ArrayList<Animal> meusAnimais = new ArrayList<Animal>();
 
     Scanner entrada2 = new Scanner(System.in);
 
-    
-    @Override
     public void cadastrarAnimal(Animal a) { 
         meusAnimais.add(a);
         System.out.println("Animal cadastrado com sucesso!\n Total até o momento: " + meusAnimais.size()+ "\n");
@@ -17,23 +15,20 @@ public class ColecaoAnimal implements ContratoAnimal{
         historicoAnimal(meusAnimais);
     }
 
-    @Override 
     public void historicoAnimal(ArrayList<Animal> lista) {
         for(Animal item: lista){
             System.out.println(item.toString());
         }
     } 
 
-    @Override
     public void atualizarAnimal(Animal a) {
-        System.out.println("Informe o cpf do dono: ");
-        a.setCPF_dono(entrada2.nextLine());
-        
-
         Scanner atualiza = new Scanner(System.in);
 
         int att_sts;
-        String aux_sts;
+        String aux_sts, aux_cpf;
+
+        System.out.println("Informe o cpf do dono: ");
+        aux_cpf = entrada2.nextLine();
 
         for(int i = 0; i < meusAnimais.size(); i++){
             if (a.getSts_atendimento() == true){
@@ -41,7 +36,7 @@ public class ColecaoAnimal implements ContratoAnimal{
             } else {
                 aux_sts = "Fechado";
             }
-            if(meusAnimais.contains(a)){
+            if(meusAnimais.contains(a.getCPF_())){
                 System.out.println("========================"+"\n" +
                                     "ANIMAL #" + i +"\n" + 
                                     "Nome do animal: "+ a.getNome_animal() + "\n" +
